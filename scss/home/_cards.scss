@@ -1,0 +1,15 @@
+@use "../base/globales";
+@use "../base/variables" as v; 
+
+
+.cards{
+    background-color: pink;
+    padding: 10rem 0;
+    color: black;
+
+    h2{
+        text-align: center;
+        font-size: 2rem;
+        color: v.$colorSecundario;
+    }
+}
