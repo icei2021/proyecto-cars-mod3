@@ -1,0 +1,43 @@
+@use "./variables" as v;
+
+// @mixin title {
+//     font-family: v.$fontPrimary;
+//     color: v.$colorSecundario;
+//     font-size: 2.5rem;
+//     margin-bottom: 1.2em;    
+//     text-align: center;
+// }
+
+// @include m.title(center, red, 2rem);
+@mixin title($align, $color, $size) {
+    color: $color;  //color:red;
+    text-align: $align; //text-align:center
+    font-size: $size;  //font-size:2rem
+
+    font-family: v.$fontPrimary;
+    margin-bottom: 1.2em;    
+}
+
+// @include m.title(left, blue, 1.5rem);
+// @mixin title($alineacion, $colorsito, $tamanio) {
+//     color: $colorsito;  //color:blue;
+//     text-align: $alineacion; //text-align:left
+//     font-size: $tamanio;  //font-size:1.5rem
+//     font-family: v.$fontPrimary;
+//     margin-bottom: 1.2em;    
+// }
+
+
+// @include m.grid(repeat(3, 1fr))
+@mixin grid($columns, $sizeColumns, $gap){
+    display: grid;
+    grid-template-columns: repeat($columns, $sizeColumns);
+    gap: $gap;
+}
+
+@mixin image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}

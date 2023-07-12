@@ -1,15 +1,39 @@
-@use "../base/globales";
-@use "../base/variables" as v; 
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.gallery{
+    margin-bottom: 2em;   
+}
+
+.subtitle{
+    // color: v.$colorSecundario ;
+    // font-family: v.$fontPrimary;
+    // font-size: 2.5rem;
+    // text-align:center;
+    // margin-bottom: 1.2em;
+    @include m.title(center, v.$colorSecundario, 2.5rem);
+}
 
 
-.cards{
-    background-color: pink;
-    padding: 10rem 0;
-    color: black;
+.gallery-container{
+    // display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    // gap:1.5em;
 
-    h2{
-        text-align: center;
-        font-size: 2rem;
-        color: v.$colorSecundario;
+    @include m.grid(3, 1fr, 1.5em);
+    .gallery-card{
+        cursor: pointer;
+        overflow: hidden;
+        .gallery-image{
+            // width: 100%;
+            // height: 100%;
+            // object-fit: cover;
+            // object-position: center;
+            @include m.image;
+            transition: transform .5s ease-in;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
     }
 }

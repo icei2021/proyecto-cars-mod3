@@ -9,6 +9,7 @@
     position: relative;
     background-size: cover;
     background-position: center;
+    margin-bottom: 2em;
 }
 
 .navigation{
@@ -23,6 +24,7 @@
 .logo{
     color: v.$colorLight;
     font-size: 1.5rem;
+    font-family: v.$fontPrimary;
 }
 
 .navigation-container{
@@ -34,7 +36,7 @@
 .navigation-link{
     color: v.$colorLight;
     font-size: 1.2rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: v.$fontSecondary;
     font-weight: lighter;
 }
 
@@ -51,14 +53,14 @@
     text-align: center;
     margin-bottom: 1.5rem;
     color: v.$colorLight;
-    font-family: Helvetica;
+    font-family: v.$fontPrimary;
 }
 
 .header-text{
     text-align: center;
     margin-bottom: 1.5rem;
     color: v.$colorLight;
-    font-family: Arial;
+    font-family: v.$fontSecondary;
 }
 
 .btn{
@@ -69,5 +71,5 @@
 .btn-primary{
     background-color: v.$colorPrimario;
     color: v.$colorLight;
-    font-family: Arial;
+    font-family: v.$fontPrimary;
 }
