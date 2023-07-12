@@ -11,10 +11,11 @@
     background-size: cover;
     background-position: center;
     margin-bottom: 2em;
+    position: relative;
 }
 
 .navigation{
-    padding: 1rem 0;
+    padding: 1rem 2.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,12 +34,9 @@
 
 #mobile{
     display: none;
-
     @include m.medium{
         &:checked + .navigation-container{
-            display: flex;
-            flex-direction: column;
-            transform: translateX(-30%);
+            transform: translateX(0%);
         }
     }
 }
@@ -58,19 +56,19 @@
     width: 55%;
     justify-content: space-between;
     @include m.medium{
-        display: none;
         position: absolute;
-        left: 0;
+        flex-direction: column;
         top: 0;
+        left: 0;
         bottom: 0;
         backdrop-filter: blur(3px);
         background-color: rgba(255,255,255,.1);
-        width: 200px;
+        width: 280px;
         height: 100vh;
         justify-content: flex-start;
-        padding: 4em 0 0 2em;
-        transform: translateX(-150%);
-        transition: all .7s ease;
+        padding: 4em 0 0 3em;
+        transform: translateX(-100%);
+        transition: transform .5s ease;
     }
 }
 
